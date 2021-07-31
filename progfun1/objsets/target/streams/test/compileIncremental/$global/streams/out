@@ -1,0 +1,52 @@
+[0m[[0m[0mdebug[0m] [0m[0mThe objsets.TweetSet has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(findMostRetweeted,[Default]), UsedName(mostRetweeted,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) objsets.TweetSet: Set(); now invalidating by inheritance (internally).[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) objsets.TweetSet.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of objsets.TweetSetSuite. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of objsets.TweetSetSuite.TestSets. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe objsets.Empty has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(finalize,[Default]), UsedName(findMostRetweeted,[Default]), UsedName(notifyAll,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) objsets.Empty: Set(); now invalidating by inheritance (internally).[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) objsets.Empty.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of objsets.TweetSetSuite. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of objsets.TweetSetSuite.TestSets. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set(/home/eloy/Code/scala/objsets/src/test/scala/objsets/TweetSetSuite.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set(/home/eloy/Code/scala/progfun1/objsets/src/test/scala/objsets/TweetSetSuite.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set(/home/eloy/Code/scala/objsets/target/scala-2.13/test-classes/objsets/TweetSetSuite$$anon$7.class, /home/eloy/Code/scala/objsets/target/scala-2.13/test-classes/objsets/TweetSetSuite$$anon$1.class, /home/eloy/Code/scala/objsets/target/scala-2.13/test-classes/objsets/TweetSetSuite.class, /home/eloy/Code/scala/objsets/target/scala-2.13/test-classes/objsets/TweetSetSuite$$anon$5.class, /home/eloy/Code/scala/objsets/target/scala-2.13/test-classes/objsets/TweetSetSuite$$anon$3.class, /home/eloy/Code/scala/objsets/target/scala-2.13/test-classes/objsets/TweetSetSuite$$anon$6.class, /home/eloy/Code/scala/objsets/target/scala-2.13/test-classes/objsets/TweetSetSuite$$anon$2.class, /home/eloy/Code/scala/objsets/target/scala-2.13/test-classes/objsets/TweetSetSuite$$anon$4.class, /home/eloy/Code/scala/objsets/target/scala-2.13/test-classes/objsets/TweetSetSuite$TestSets.class)[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set(NamesChange(objsets.TweetSet,ModifiedNames(changes = UsedName(findMostRetweeted,[Default]), UsedName(mostRetweeted,[Default]))), NamesChange(objsets.Empty,ModifiedNames(changes = UsedName(finalize,[Default]), UsedName(findMostRetweeted,[Default]), UsedName(notifyAll,[Default]))))[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(objsets.TweetSetSuite, objsets.TweetSetSuite.TestSets)[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set(/home/eloy/Code/scala/objsets/src/test/scala/objsets/TweetSetSuite.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(objsets.TweetSetSuite, objsets.TweetSetSuite.TestSets)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/eloy/Code/scala/progfun1/objsets/src/test/scala/objsets/TweetSetSuite.scala, /home/eloy/Code/scala/objsets/src/test/scala/objsets/TweetSetSuite.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mRecompiling all 1 sources: invalidated sources (2) exceeded 50.0% of all sources[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to /home/eloy/Code/scala/progfun1/objsets/target/scala-2.13/test-classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.13:1.2.5:compile for Scala 2.13.0[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.13:1.2.5:compile for Scala 2.13.0[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 5e1071f for Scala compiler version 2.13.0[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-language:implicitConversions[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-deprecation[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/home/eloy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.0/scala-library-2.13.0.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/home/eloy/Code/scala/progfun1/objsets/target/scala-2.13/test-classes:/home/eloy/Code/scala/progfun1/objsets/target/scala-2.13/classes:/home/eloy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/eloy/.cache/coursier/v1/https/repo1.maven.org/maven2/junit/junit/4.11/junit-4.11.jar:/home/eloy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar:/home/eloy/.cache/coursier/v1/https/repo1.maven.org/maven2/com/novocode/junit-interface/0.11/junit-interface-0.11.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.585309192 s[0m
+[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll newly invalidated classes after taking into account (previously) recompiled classes:Set()[0m

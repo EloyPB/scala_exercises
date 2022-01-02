@@ -1,0 +1,7 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/eloy/Code/scala/effprog/fireworks/target/scala-3.0.0/effective-scala-fireworks_3-0.1.0-SNAPSHOT-sources.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	fireworks/Fireworks.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala/effprog/fireworks/src/main/scala/fireworks/Fireworks.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	fireworks/FireworksRunner.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala/effprog/fireworks/src/main/scala/fireworks/FireworksRunner.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

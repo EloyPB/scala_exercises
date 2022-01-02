@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite hostname="etp" name="fireworks.FireworksSuite" tests="12" errors="0" failures="0" skipped="0" time="0.45" timestamp="2021-10-30T14:22:29">
+          <properties>
+      <property name="java.specification.version" value="16"/><property name="sun.jnu.encoding" value="UTF-8"/><property name="sun.arch.data.model" value="64"/><property name="sbt.supershell" value="false"/><property name="java.vendor.url" value="https://java.oracle.com/"/><property name="sun.boot.library.path" value="/home/eloy/.jdks/openjdk-16.0.2/lib"/><property name="sun.java.command" value="/home/eloy/.local/share/JetBrains/Toolbox/apps/IDEA-C/ch-0/213.5449.25.plugins/Scala/launcher/sbt-launch.jar early(addPluginSbtFile=&quot;&quot;&quot;/tmp/idea.sbt&quot;&quot;&quot;) ; set ideaPort in Global := 43781 ; idea-shell"/><property name="jdk.debug" value="release"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="java.version.date" value="2021-07-20"/><property name="java.home" value="/home/eloy/.jdks/openjdk-16.0.2"/><property name="file.separator" value="/"/><property name="java.vm.compressedOopsMode" value="32-bit"/><property name="line.separator" value="
+"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="idea.installation.dir" value="/home/eloy/.local/share/JetBrains/Toolbox/apps/IDEA-C/ch-0/213.5449.25"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="java.runtime.version" value="16.0.2+7-67"/><property name="user.name" value="eloy"/><property name="log4j.ignoreTCL" value="true"/><property name="file.encoding" value="UTF-8"/><property name="jnidispatch.path" value="/home/eloy/.cache/JNA/temp/jna472064946610358922.tmp"/><property name="jna.loaded" value="true"/><property name="java.io.tmpdir" value="/tmp"/><property name="java.version" value="16.0.2"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/><property name="java.vendor" value="Oracle Corporation"/><property name="sun.io.unicode.encoding" value="UnicodeLittle"/><property name="java.class.path" value="/home/eloy/.local/share/JetBrains/Toolbox/apps/IDEA-C/ch-0/213.5449.25.plugins/Scala/launcher/sbt-launch.jar"/><property name="java.vm.vendor" value="Oracle Corporation"/><property name="jline.shutdownhook" value="false"/><property name="user.timezone" value="Europe/Berlin"/><property name="java.vm.specification.version" value="16"/><property name="os.name" value="Linux"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="user.country" value="US"/><property name="sun.cpu.endian" value="little"/><property name="user.home" value="/home/eloy"/><property name="user.language" value="en"/><property name="swoval.tmpdir" value="/home/eloy/.sbt/1.0"/><property name="jline.esc.timeout" value="0"/><property name="path.separator" value=":"/><property name="os.version" value="5.11.0-38-generic"/><property name="jna.nosys" value="true"/><property name="java.runtime.name" value="OpenJDK Runtime Environment"/><property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/><property name="jna.platform.library.path" value="/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib64:/lib64:/usr/lib:/lib:/usr/lib/x86_64-linux-gnu/libfakeroot"/><property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/><property name="user.dir" value="/home/eloy/Code/scala/effprog/fireworks"/><property name="os.arch" value="amd64"/><property name="idea.managed" value="true"/><property name="java.vm.info" value="mixed mode, sharing"/><property name="java.vm.version" value="16.0.2+7-67"/><property name="java.class.version" value="60.0"/>
+    </properties>
+          <testcase classname="fireworks.FireworksSuite" name="'Firework.next' returns 'Done' when given 'Done' `" time="0.034">
+                      
+                    </testcase><testcase classname="fireworks.FireworksSuite" name="'Firework.next' returns 'Waiting' or 'Launched' when given 'Waiting'" time="0.115">
+                      
+                    </testcase><testcase classname="fireworks.FireworksSuite" name="'Firework.next' returns 'Launched' or 'Exploding' when given 'Launched'" time="0.02">
+                      
+                    </testcase><testcase classname="fireworks.FireworksSuite" name="'Firework.next' returns 'Exploding' or 'Done' when given 'Exploding'" time="0.071">
+                      
+                    </testcase><testcase classname="fireworks.FireworksSuite" name="Operation 'next' on class 'Waiting' should return the same 'Waiting' value with a decremented 'countDown' until it is zero or negative" time="0.018">
+                      
+                    </testcase><testcase classname="fireworks.FireworksSuite" name="Operation 'next' on class 'Waiting' should return a 'Launched' value if the 'countDown' is zero or negative" time="0.011">
+                      
+                    </testcase><testcase classname="fireworks.FireworksSuite" name="Operation 'next' on class 'Launched' should return a 'Launched' value with a decremented 'countDown' until it is zero or negative" time="0.013">
+                      
+                    </testcase><testcase classname="fireworks.FireworksSuite" name="Operation 'next' on class 'Launched' should return a 'Launched' value with an updated 'position' until the 'countDown' is zero or negative" time="0.009">
+                      
+                    </testcase><testcase classname="fireworks.FireworksSuite" name="Operation 'next' on class 'Launched' should return an 'Exploding' value if the 'countDown' is zero or negative" time="0.011">
+                      
+                    </testcase><testcase classname="fireworks.FireworksSuite" name="Operation 'next' on class 'Exploding' should return an 'Exploding' value with a decremented 'countDown' until it is zero or negative" time="0.099">
+                      
+                    </testcase><testcase classname="fireworks.FireworksSuite" name="Operation 'next' on class 'Exploding' should return a 'Done' value if the 'countDown' is zero or negative" time="0.046">
+                      
+                    </testcase><testcase classname="fireworks.FireworksSuite" name="Operation 'next' on class 'Particle' should return a 'Particle' value that has moved" time="0.003">
+                      
+                    </testcase>
+          <system-out><![CDATA[]]></system-out>
+          <system-err><![CDATA[]]></system-err>
+        </testsuite>

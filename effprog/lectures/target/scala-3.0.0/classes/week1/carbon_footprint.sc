@@ -1,8 +1,7 @@
-case class Experience(duration: Int, definition: Double, network: Network)
-
 enum Network:
   case Fixed, Mobile
 
+case class Experience(duration: Int, definition: Double, network: Network)
 
 val lowQuality  = 0.3 // MB/s
 val highQuality = 0.6 // MB/s
@@ -27,5 +26,5 @@ def footprint(experience: Experience): Double =
   val energy    = dataCenterEnergy + networkEnergy(experience.network)
   energy * megabytes * kgC02PerKwh
 
-//footprint(lowQualityAndFixed)
-//footprint(highQualityAndMobile)
+footprint(lowQualityAndFixed)
+footprint(highQualityAndMobile)

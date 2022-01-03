@@ -1,4 +1,0 @@
-[0m[[0m[33mwarn[0m] [0m[0m/home/eloy/Code/scala/objsets/project/StudentTasks.scala:70:10: method zip in object IO is deprecated (since 1.3.2): Please specify whether to use a static timestamp[0m
-[0m[[0m[33mwarn[0m] [0m[0m      IO.zip(Seq(sources -> "sources.zip", binaries -> "binaries.jar"), submission)[0m
-[0m[[0m[33mwarn[0m] [0m[0m         ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

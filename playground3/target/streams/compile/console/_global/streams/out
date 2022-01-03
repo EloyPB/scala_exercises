@@ -1,5 +1,0 @@
-[0m[[0m[0mdebug[0m] [0m[0mWaiting for threads to exit or System.exit to be called.[0m
-[0m[[0m[0mdebug[0m] [0m[0mReturning already retrieved and compiled bridge: /home/eloy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-sbt-bridge/3.0.0/scala3-sbt-bridge-3.0.0.jar.[0m
-[0m[[0m[0mdebug[0m] [0m[0mReturning already retrieved and compiled bridge: /home/eloy/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-sbt-bridge/3.0.0/scala3-sbt-bridge-3.0.0.jar.[0m
-[0m[[0m[0mdebug[0m] [0m[0mWaiting for thread run-main-0 to terminate.[0m
-[0m[[0m[33mwarn[0m] [0m[0mRun canceled.[0m

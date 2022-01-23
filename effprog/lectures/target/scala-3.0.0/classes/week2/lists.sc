@@ -13,3 +13,21 @@ val numberOfContacts = addressBook.contacts.size
 val aliceThere = addressBook.contacts.contains(alice)
 val contactNames = addressBook.contacts.map(contact => contact.name)
 val contactsWithPhone = addressBook.contacts.filter(contact => contact.phoneNumbers.nonEmpty)
+
+
+// prepending to a list is a constant time operation because it reuses the tail list
+val contactNames2 = "Eloy" :: contactNames
+
+// :: is right associative
+alice :: bob :: Nil
+// is the same as:
+Nil.::(bob).::(alice)
+
+
+addressBook.contacts match
+  case first :: second :: Nil => second
+  case _ => println("unexpected number of contacts")
+
+val fruits = List("apples", "oranges", "pears")
+fruits.tail
+fruits(0)

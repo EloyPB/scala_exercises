@@ -31,3 +31,5 @@ addressBook.contacts match
 val fruits = List("apples", "oranges", "pears")
 fruits.tail
 fruits(0)
+
+fruits ++ List("bananas", "strawberries")

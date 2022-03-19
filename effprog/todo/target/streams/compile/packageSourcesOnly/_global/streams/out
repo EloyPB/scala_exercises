@@ -1,0 +1,31 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/eloy/Code/scala_exercises/effprog/todo/target/scala-3.0.0/effective-scala-todo_3-0.1.0-SNAPSHOT-sources.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	todo/IdGenerator.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala_exercises/effprog/todo/src/main/scala/todo/IdGenerator.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	todo/Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala_exercises/effprog/todo/src/main/scala/todo/Main.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	todo/AssetService.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala_exercises/effprog/todo/src/main/scala/todo/AssetService.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	todo/Model.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala_exercises/effprog/todo/src/main/scala/todo/Model.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	todo/PersistentModel.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala_exercises/effprog/todo/src/main/scala/todo/PersistentModel.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	todo/TodoService.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala_exercises/effprog/todo/src/main/scala/todo/TodoService.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	todo/InMemoryModel.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala_exercises/effprog/todo/src/main/scala/todo/InMemoryModel.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	todo/data/Tag.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala_exercises/effprog/todo/src/main/scala/todo/data/Tag.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	todo/data/Tags.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala_exercises/effprog/todo/src/main/scala/todo/data/Tags.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	todo/data/Task.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala_exercises/effprog/todo/src/main/scala/todo/data/Task.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	todo/data/State.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala_exercises/effprog/todo/src/main/scala/todo/data/State.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	todo/data/Codecs.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala_exercises/effprog/todo/src/main/scala/todo/data/Codecs.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	todo/data/Tasks.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala_exercises/effprog/todo/src/main/scala/todo/data/Tasks.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	todo/data/Id.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/eloy/Code/scala_exercises/effprog/todo/src/main/scala/todo/data/Id.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

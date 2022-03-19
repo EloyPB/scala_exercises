@@ -15,3 +15,8 @@ def namesAndSwissNumbers(contacts: List[Contact]): List[(String, String)] =
   yield (contact.name, phoneNumber)
 
 namesAndSwissNumbers(contacts)
+
+
+contacts
+  .flatMap(contact => contact.phoneNumbers.withFilter(n => n.startsWith("+41"))
+    .map((contact.name, _)))

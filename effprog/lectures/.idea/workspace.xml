@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b46c06d3-4422-4e2f-8fa5-83a4c827db41" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.directory" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_fansi_3_0_3_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_sourcecode_3_0_2_8_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_library_2_13_6_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalameta_junit_interface_0_7_29_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalameta_munit_3_0_7_29_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/week3/imports.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/week3/opaque.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/assignment.sbt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/build.sbt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/project/MOOCSettings.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/project/StudentTasks.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/project/build.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/project/buildSettings.sbt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/project/plugins.sbt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/resources/todo/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/resources/todo/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/resources/todo/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/resources/todo/todo-ui-opt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/resources/todo/todo-ui-opt.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/scala/todo/AssetService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/scala/todo/CirceShim.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/scala/todo/IdGenerator.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/scala/todo/InMemoryModel.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/scala/todo/Main.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/scala/todo/Model.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/scala/todo/PersistentModel.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/scala/todo/TodoService.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/scala/todo/data/Codecs.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/scala/todo/data/Id.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/scala/todo/data/State.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/scala/todo/data/Tag.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/scala/todo/data/Tags.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/scala/todo/data/Task.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/main/scala/todo/data/Tasks.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/test/scala/todo/IdGeneratorSuite.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/test/scala/todo/TodoSuite.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todo/src/test/scala/todo/data/BijectionSuite.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/.bsp/sbt.json" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/.bsp/sbt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/.idea/modules/effective-scala-fireworks-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/.idea/modules/effective-scala-fireworks-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/.idea/modules/effective-scala-fireworks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/.idea/modules/effective-scala-fireworks.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/.idea/sbt.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/project/target/config-classes/$0d2dd80d4432734c69a4$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/project/target/config-classes/$0d2dd80d4432734c69a4.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/project/target/config-classes/$0d2dd80d4432734c69a4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/project/target/config-classes/$45d74abd007acc7198b6$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/project/target/config-classes/$45d74abd007acc7198b6.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/project/target/config-classes/$45d74abd007acc7198b6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/project/target/config-classes/$6ec281cce55c3c733a3d$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/project/target/config-classes/$6ec281cce55c3c733a3d.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/project/target/config-classes/$6ec281cce55c3c733a3d.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/project/target/config-classes/$b459f6ca80e23cb2d555$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/project/target/config-classes/$b459f6ca80e23cb2d555.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/project/target/config-classes/$b459f6ca80e23cb2d555.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/project/target/config-classes/$d36859bb813a92bd24b0$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/project/target/config-classes/$d36859bb813a92bd24b0.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/project/target/config-classes/$d36859bb813a92bd24b0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$02acbc86b38045f1e0c7$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$02acbc86b38045f1e0c7.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$02acbc86b38045f1e0c7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$0b51af94196131cc87a9$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$0b51af94196131cc87a9.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$0b51af94196131cc87a9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$45fcfd61e1f1f3e3ef29$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$45fcfd61e1f1f3e3ef29.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$45fcfd61e1f1f3e3ef29.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$5c59979cfc560a5b0032$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$5c59979cfc560a5b0032.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$5c59979cfc560a5b0032.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$6192526c15e083323332$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$6192526c15e083323332.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$6192526c15e083323332.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$66d967cd21cbe4389852$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$66d967cd21cbe4389852.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$66d967cd21cbe4389852.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$b9b6c82f328cd643172f$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$b9b6c82f328cd643172f.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$b9b6c82f328cd643172f.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$ccaa1af78376d4ea116a$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$ccaa1af78376d4ea116a.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$ccaa1af78376d4ea116a.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$e5427903e187c277cfb4$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$e5427903e187c277cfb4.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/config-classes/$e5427903e187c277cfb4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/input_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/input_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/_global/update/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/_global/update/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/_global/_global/compileOutputs/previous" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/_global/_global/compileOutputs/previous" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/compileIncremental/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/compileIncremental/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/copyResources/_global/streams/copy-resources" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/copyResources/_global/streams/copy-resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/copyResources/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/copyResources/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/dependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/dependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/exportedProducts/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/exportedProducts/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/incOptions/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/incOptions/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/compile/managedClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/runtime/dependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/runtime/dependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/runtime/exportedProducts/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/runtime/exportedProducts/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/runtime/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/runtime/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/runtime/fullClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/runtime/fullClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/runtime/internalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/runtime/internalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/project/target/streams/runtime/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/project/target/streams/runtime/managedClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/.history3" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/.history3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Done.class" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Done.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Done.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Done.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Exploding.class" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Exploding.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Exploding.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Exploding.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Firework.class" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Firework.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Firework.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Firework.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/FireworksRunner$package.class" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/FireworksRunner$package.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/FireworksRunner$package.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/FireworksRunner$package.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Launched.class" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Launched.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Launched.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Launched.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Motion.class" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Motion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Motion.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Motion.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Particle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Particle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Particle.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Particle.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Particles.class" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Particles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Particles.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Particles.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Settings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Settings.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Settings.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Waiting.class" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Waiting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Waiting.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/Waiting.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/run.class" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/run.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/run.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/classes/fireworks/run.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/test-classes/fireworks/FireworksGenerators.class" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/test-classes/fireworks/FireworksGenerators.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/test-classes/fireworks/FireworksGenerators.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/test-classes/fireworks/FireworksGenerators.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/test-classes/fireworks/FireworksSuite.class" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/test-classes/fireworks/FireworksSuite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/test-classes/fireworks/FireworksSuite.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/scala-3.0.0/test-classes/fireworks/FireworksSuite.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/streams/_global/dependencyPositions/_global/streams/update_cache_3/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/streams/_global/dependencyPositions/_global/streams/update_cache_3/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fireworks/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/output" beforeDir="false" afterPath="$PROJECT_DIR$/../fireworks/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__junit_junit_4_11_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__junit_junit_4_13_2_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala3_library_3_3_0_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala3_library_3_3_0_2_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_library_2_13_5_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/scala3-simple-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/scala3-simple-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/scala3-simple.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/scala3-simple.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$09fcfebac2cf28cb44a9$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$09fcfebac2cf28cb44a9.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$09fcfebac2cf28cb44a9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$f0179750bf052c724b1a$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$f0179750bf052c724b1a.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$f0179750bf052c724b1a.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/update/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/input_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/input_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/_global/dependencyPositions/_global/streams/update_cache_2.12/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/_global/update/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/_global/update/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/incOptions/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/incOptions/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.0.0/classes/Main$package$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.0.0/classes/Main$package$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.0.0/classes/Main$package.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.0.0/classes/Main$package.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.0.0/classes/Main$package.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.0.0/classes/Main$package.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.0.0/classes/hello.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.0.0/classes/hello.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.0.0/classes/hello.tasty" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.0.0/classes/hello.tasty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.0.0/classes/week2/for.sc" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.0.0/classes/week2/for.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.0.0/classes/week2/lists.sc" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.0.0/classes/week2/lists.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.0.0/test-classes/Test1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.0.0/test-classes/Test1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.0.0/update/update_cache_3/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.0.0/update/update_cache_3/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-3.0.0/update/update_cache_3/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-3.0.0/update/update_cache_3/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/_global/csrLogger/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/_global/csrLogger/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_3/input_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_3/input_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_3/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/dependencyPositions/_global/streams/update_cache_3/output_dsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_3/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/_global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/_global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/_global/streams/export" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="SBT">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lectures" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Worksheet" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="1uXGYVKPeZMwiT2Nb2ucOapBMZz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../todo" />
+    <property name="scala_project_settings_configurable.last_selected_tab_index" value="6" />
+    <property name="settings.editor.selected.configurable" value="sbt.project.settings.configurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="hello" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="hello" />
+      <module name="scala3-simple" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.hello" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ScalaProjectSettings">
+    <option name="intInjectionMapping">
+      <map>
+        <entry key="xml" value="XML" />
+      </map>
+    </option>
+    <option name="scala3DisclaimerShown" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b46c06d3-4422-4e2f-8fa5-83a4c827db41" name="Default Changelist" comment="" />
+      <created>1624804568061</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624804568061</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

@@ -2,6 +2,8 @@ package scalashop
 
 import org.scalameter.*
 
+import java.util.concurrent.ForkJoinTask
+
 object VerticalBoxBlurRunner:
 
   val standardConfig = config(
@@ -41,7 +43,11 @@ object VerticalBoxBlur extends VerticalBoxBlurInterface:
    */
   def blur(src: Img, dst: Img, from: Int, end: Int, radius: Int): Unit =
     // TODO implement this method using the `boxBlurKernel` method
-    ???
+    for (col <- from until clamp(end, 0, src.width)){
+      for (row <- 0 until src.height){
+        dst.update(col, row, boxBlurKernel(src, col, row, radius))
+      }
+    }
 
   /** Blurs the columns of the source image in parallel using `numTasks` tasks.
    *
@@ -51,5 +57,9 @@ object VerticalBoxBlur extends VerticalBoxBlurInterface:
    */
   def parBlur(src: Img, dst: Img, numTasks: Int, radius: Int): Unit =
     // TODO implement using the `task` construct and the `blur` method
-    ???
+    val stripWidth = (src.width.toFloat / numTasks).ceil.toInt.min(1)
+    val splitPoints = 0 until src.width + stripWidth by stripWidth
+    val splits = splitPoints.zip(splitPoints.tail)
+    val tasks = splits.map(s => task {blur(src, dst, s(0), s(1), radius)})
+    tasks.foreach(_.join())
 

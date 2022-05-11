@@ -38,20 +38,26 @@ class Img(val width: Int, val height: Int, private val data: Array[RGBA]):
 
 /** Computes the blurred RGBA value of a single pixel of the input image. */
 def boxBlurKernel(src: Img, x: Int, y: Int, radius: Int): RGBA =
-
-  val sums = Array(0, 0, 0, 0)
-  var num_pixels = 0
-  for (row <- clamp(x - radius, 0, src.height - 1) to clamp(x + radius, 0, src.height - 1)) {
-    for (col <- clamp(x - radius, 0, src.width - 1) to clamp(x + radius, 0, src.width - 1)) {
-      val pixel = src(col, row)
-      sums(0) += red(pixel)
-      sums(1) += green(pixel)
-      sums(2) += blue(pixel)
-      sums(3) += red(pixel)
-      num_pixels += 1
+  if radius <= 0 then src(x, y)
+  else {
+    var sumR = 0
+    var sumG = 0
+    var sumB = 0
+    var sumA = 0
+    var num_pixels = 0
+    for (row <- clamp(y - radius, 0, src.height - 1) to clamp(y + radius, 0, src.height - 1)) {
+      for (col <- clamp(x - radius, 0, src.width - 1) to clamp(x + radius, 0, src.width - 1)) {
+        val pixel = src(col, row)
+        num_pixels += 1
+        sumR += red(pixel)
+        sumG += green(pixel)
+        sumB += blue(pixel)
+        sumA += alpha(pixel)
+      }
     }
+    rgba(sumR/num_pixels, sumG/num_pixels, sumB/num_pixels, sumA/num_pixels)
   }
-  rgba(sums(0)/num_pixels, sums(1)/num_pixels, sums(2)/num_pixels, sums(3)/num_pixels)
+
 
 val forkJoinPool = ForkJoinPool()
 

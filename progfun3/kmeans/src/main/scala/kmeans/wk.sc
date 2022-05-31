@@ -11,9 +11,9 @@ val kMeans = KMeans()
 //kMeans.update(classified, means)
 
 val p: ParSeq[Point] = IndexedSeq(Point(0.0, 0.0, 1.0), Point(0.0, 0.0, -1.0), Point(0.0, 1.0, 0.0), Point(0.0, 10.0, 0.0)).par
-val m: ParSeq[Point] = IndexedSeq(Point(0, 0, 0), Point(0, 5.5, 0)).par
+val m: ParSeq[Point] = IndexedSeq(Point(0, -1, 0), Point(0, 2, 0)).par
 
-//val c = kMeans.classify(p, m)
-//val nm = kMeans.update(c, m)
-//kMeans.converged(12.25, m, nm)
-val fm = kMeans.kMeans(p, m, 0.00001)
+val c = kMeans.classify(p, m)
+val nm = kMeans.update(c, m)
+kMeans.converged(12.5, m, nm)
+val fm = kMeans.kMeans(p, m, 12.5)

@@ -64,8 +64,7 @@ class KMeans extends KMeansInterface:
   final def kMeans(points: ParSeq[Point], means: ParSeq[Point], eta: Double): ParSeq[Point] =
     val classified = classify(points, means)
     val newMeans = update(classified, means)
-    println("hi")
-    if (!converged(eta, means, newMeans)) kMeans(points, newMeans, eta) else means // your implementation needs to be tail recursive
+    if (!converged(eta, means, newMeans)) kMeans(points, newMeans, eta) else newMeans // your implementation needs to be tail recursive
 
 /** Describes one point in three-dimensional space.
  *

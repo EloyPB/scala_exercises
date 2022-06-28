@@ -1,0 +1,17 @@
+*.DS_Store
+*.swp
+*~
+*.class
+*.tasty
+target/
+logs/
+.bloop
+.bsp
+.dotty-ide-artifact
+.dotty-ide.json
+.idea
+.metals
+.vscode
+*.csv
+*.dat
+winutils

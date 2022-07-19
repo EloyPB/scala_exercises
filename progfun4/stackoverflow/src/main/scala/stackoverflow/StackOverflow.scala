@@ -42,13 +42,13 @@ object StackOverflow extends StackOverflow:
     val lines   = sc.parallelize(inputFile.getLines().toList)
     val raw     = rawPostings(lines)
     val grouped = groupedPostings(raw)
-    val scored  = scoredPostings(grouped)
+    val scored  = scoredPostings(grouped).sample(true, 0.05, 0)
     val vectors = vectorPostings(scored)
-    assert(vectors.count() == 1042132, "Incorrect number of vectors: " + vectors.count())
+//    assert(vectors.count() == 1042132, "Incorrect number of vectors: " + vectors.count())
 
-//    val means   = kmeans(sampleVectors(vectors), vectors, debug = true)
-//    val results = clusterResults(means, vectors)
-//    printResults(results)
+    val means   = kmeans(sampleVectors(vectors), vectors, debug = true)
+    val results = clusterResults(means, vectors)
+    printResults(results)
 
 /** The parsing and kmeans methods */
 class StackOverflow extends StackOverflowInterface with Serializable:
@@ -178,7 +178,9 @@ class StackOverflow extends StackOverflowInterface with Serializable:
     // TODO: Compute the groups of points that are the closest to each mean,
     // and then compute the new means of each group of points. Finally, compute
     // a Map that associate the old `means` values to their new values
-    val newMeansMap: scala.collection.Map[(Int, Int), (Int, Int)] = ???
+    val paired = vectors.map(v => (findClosest(v, means), v))
+    val grouped = paired.groupByKey()
+    val newMeansMap: scala.collection.Map[(Int, Int), (Int, Int)] = grouped.map((k, v) => (k, averageVectors(v))).collect().toMap
     val newMeans: Array[(Int, Int)] = means.map(oldMean => newMeansMap(oldMean))
     val distance = euclideanDistance(means, newMeans)
 
@@ -263,15 +265,27 @@ class StackOverflow extends StackOverflowInterface with Serializable:
   //  Displaying results:
   //
   //
+  def medianComp(seq: List[Int]): Int = {
+    //In order if you are not sure that 'seq' is sorted
+    val sortedSeq = seq.sorted
+
+    if (seq.size % 2 == 1) sortedSeq(sortedSeq.size / 2)
+    else {
+      val (up, down) = sortedSeq.splitAt(seq.size / 2)
+      (up.last + down.head) / 2
+    }
+  }
+
   def clusterResults(means: Array[(Int, Int)], vectors: RDD[(LangIndex, HighScore)]): Array[(String, Double, Int, Int)] =
     val closest = vectors.map(p => (findClosest(p, means), p))
     val closestGrouped = closest.groupByKey()
 
     val median = closestGrouped.mapValues { vs =>
-      val langLabel: String   = ??? // most common language in the cluster
-      val langPercent: Double = ??? // percent of the questions in the most common language
-      val clusterSize: Int    = ???
-      val medianScore: Int    = ???
+      val mostCommon: (Int, Int) = vs.map(_._1).groupBy(l => l).map((l, ll) => (l, ll.size)).toList.sortBy(_._2).reverse.head
+      val langLabel: String   = langs(mostCommon._1 / langSpread) // most common language in the cluster
+      val langPercent: Double = mostCommon._2 * 100.0 / vs.size // percent of the questions in the most common language
+      val clusterSize: Int    = vs.size
+      val medianScore: Int    = medianComp(vs.map(_._2).toList)
 
       (langLabel, langPercent, clusterSize, medianScore)
     }

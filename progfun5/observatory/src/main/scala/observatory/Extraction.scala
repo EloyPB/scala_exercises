@@ -1,6 +1,8 @@
 package observatory
 
 import java.time.LocalDate
+import org.apache.spark.sql.*
+import org.apache.spark.sql.types._
 
 /**
   * 1st milestone: data extraction
@@ -13,6 +15,29 @@ object Extraction extends ExtractionInterface:
     * @param temperaturesFile Path of the temperatures resource file to use (e.g. "/1975.csv")
     * @return A sequence containing triplets (date, location, temperature)
     */
+
+
+  def locateTemperaturesSpark(year: Year, stationsFile: String, temperaturesFile: String): Unit =
+    val tempSchema = StructType(Array(
+      StructField("stn", IntegerType, true),
+      StructField("wban", IntegerType, true),
+      StructField("month", IntegerType, true),
+      StructField("day", IntegerType, true),
+      StructField("temperature", DoubleType, true),
+    ))
+    val temperatures = spark.read.format("csv").schema(tempSchema)
+      .load(s"src/main/resources/$temperaturesFile")
+
+    val locSchema = StructType(Array(
+      StructField("stn", IntegerType, true),
+      StructField("wban", IntegerType, true),
+      StructField("lat", DoubleType, true),
+      StructField("long", DoubleType, true)
+    ))
+    val locations = spark.read.format("csv").schema(locSchema)
+      .load(s"src/main/resources/$stationsFile")
+    locations.show()
+
   def locateTemperatures(year: Year, stationsFile: String, temperaturesFile: String): Iterable[(LocalDate, Location, Temperature)] =
     ???
 

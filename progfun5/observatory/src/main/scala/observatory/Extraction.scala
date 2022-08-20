@@ -27,6 +27,7 @@ object Extraction extends ExtractionInterface:
     ))
     val temperatures = spark.read.format("csv").schema(tempSchema)
       .load(s"src/main/resources/$temperaturesFile")
+    temperatures.show()
 
     val locSchema = StructType(Array(
       StructField("stn", IntegerType, true),
@@ -34,9 +35,13 @@ object Extraction extends ExtractionInterface:
       StructField("lat", DoubleType, true),
       StructField("long", DoubleType, true)
     ))
-    val locations = spark.read.format("csv").schema(locSchema)
+    val stations = spark.read.format("csv").schema(locSchema)
       .load(s"src/main/resources/$stationsFile")
-    locations.show()
+    stations.show()
+
+//    val joined = stations.join(temperatures, Seq("stn", "wban"))
+    val joined = stations.join(temperatures, stations("stn").eqNullSafe(temperatures("stn")) && stations("wban").eqNullSafe(temperatures("wban")))
+    joined.show()
 
   def locateTemperatures(year: Year, stationsFile: String, temperaturesFile: String): Iterable[(LocalDate, Location, Temperature)] =
     ???

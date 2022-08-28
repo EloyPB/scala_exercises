@@ -10,6 +10,9 @@ object Main extends App:
 
   if (isWin) System.setProperty("hadoop.home.dir", System.getProperty("user.dir") + "\\winutils\\hadoop-3.3.1")
 
-  Extraction.locateTemperaturesSpark(1975, "/stations.csv", "/1975.csv")
+  //  Using spark
+  val df = Extraction.locateTemperaturesSpark(1975, "/stations.csv", "/1975.csv")
+  Extraction.averageTempSpark(df)
+
 end Main
 

@@ -5,11 +5,19 @@ import com.sksamuel.scrimage.pixels.Pixel
 import com.sksamuel.scrimage.metadata.ImageMetadata
 import com.sksamuel.scrimage.implicits.given
 import scala.collection.parallel.CollectionConverters.given
+import scala.math.{acos, sin, cos, Pi}
 
 /**
   * 2nd milestone: basic visualization
   */
 object Visualization extends VisualizationInterface:
+  val EarthRadius = 6371  // km
+
+  def greatCircleDistance(l1: Location, l2: Location): Double =
+    if l1 == l2 then 0
+    else if l1.lat == -l2.lat && (l1.lon == l2.lon + 180 || l1.lon == l2.lon - 180) then EarthRadius * Pi
+    else EarthRadius * acos(sin(l1.lat) * sin(l2.lat) + cos(l1.lat) * cos(l2.lat) * cos(l2.lon - l1.lon))
+
 
   /**
     * @param temperatures Known temperatures: pairs containing a location and the temperature at this location

@@ -60,16 +60,17 @@ object Extraction extends ExtractionInterface:
       && stations("wban").eqNullSafe(temperatures("wban"))).drop(temperatures("wban")).drop(temperatures("stn"))
     joined
 
+  
   def locateTemperatures(year: Year, stationsFile: String, temperaturesFile: String): Iterable[(LocalDate, Location, Temperature)] =
     val records = locateTemperaturesSpark(year, stationsFile, temperaturesFile).collect()
     records.map(row => (LocalDate.of(year, row(4).asInstanceOf[Int], row(5).asInstanceOf[Int]),
       Location(row(2).asInstanceOf[Double], row(3).asInstanceOf[Double]), row(6).asInstanceOf[Double]))
 
+  
   def averageTempSpark(df: DataFrame): Unit =
     val average = df.groupBy("lat", "long").agg(avg("temp"))
     average.show()
-
-
+  
   /**
     * @param records A sequence containing triplets (date, location, temperature)
     * @return A sequence containing, for each location, the average temperature over the year.

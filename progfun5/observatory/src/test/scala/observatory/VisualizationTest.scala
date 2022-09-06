@@ -13,7 +13,16 @@ trait VisualizationTest extends MilestoneSuite:
   }
 
   test("Great-circle distance for the same location is 0") {
-    import scala.math.Pi
     val l1 = Location(10, 20)
     assertEquals(Visualization.greatCircleDistance(l1, l1), 0.0)
+  }
+
+  test("Interpolate between two temperatures") {
+    val temperatures = List((Location(0, -10), 10.0), (Location(0, 10), 20.0))
+    assertEquals(Visualization.predictTemperature(temperatures, Location(0, 0)), 15.0)
+  }
+
+  test("Temperature of location very close to a station") {
+    val temperatures = List((Location(0, -10), 10.0), (Location(0, 10), 20.0))
+    assertEquals(Visualization.predictTemperature(temperatures, Location(0, 10.001)), 20.0)
   }

@@ -5,7 +5,9 @@ package observatory
   * @param lat Degrees of latitude, -90 ≤ lat ≤ 90
   * @param lon Degrees of longitude, -180 ≤ lon ≤ 180
   */
-case class Location(lat: Double, lon: Double)
+case class Location(lat: Double, lon: Double):
+  val latR: Double = lat / 180 * math.Pi
+  val lonR: Double = lon / 180 * math.Pi
 
 /**
   * Introduced in Week 3. Represents a tiled web map tile.

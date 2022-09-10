@@ -5,3 +5,5 @@ pv.map(_ * 2)
 
 import scala.math.sin
 sin(3.14)
+
+2.55.round.toInt

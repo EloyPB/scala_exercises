@@ -67,9 +67,9 @@ object Extraction extends ExtractionInterface:
       Location(row(2).asInstanceOf[Double], row(3).asInstanceOf[Double]), row(6).asInstanceOf[Double]))
 
   
-  def averageTempSpark(df: DataFrame): Unit =
-    val average = df.groupBy("lat", "long").agg(avg("temp"))
-    average.show()
+  def averageTempSpark(df: DataFrame): Iterable[(Location, Temperature)] =
+    val average = df.groupBy("lat", "long").agg(avg("temp")).collect()
+    average.map(row => (Location(row.getAs[Double](0), row.getAs[Double](1)), row.getAs[Double](2)))
   
   /**
     * @param records A sequence containing triplets (date, location, temperature)

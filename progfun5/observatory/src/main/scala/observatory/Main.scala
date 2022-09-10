@@ -12,7 +12,15 @@ object Main extends App:
 
   //  Using spark
   val df = Extraction.locateTemperaturesSpark(1975, "/stations.csv", "/1975.csv")
-  Extraction.averageTempSpark(df)
+  val temperatures = Extraction.averageTempSpark(df)
+  println(s"Num records: ${temperatures.size}")
+
+  val colors = List((60.0, Color(255, 255, 255)), (32.0, Color(255, 0, 0)), (12.0, Color(255, 255, 0)),
+    (0.0, Color(0, 255, 255)), (-15.0, Color(0, 0, 255)), (-27.0, Color(255, 0, 255)), (-50.0, Color(33, 0, 107)),
+    (-60.0, Color(0, 0, 0)))
+
+  val image = Visualization.visualize(temperatures, colors)
+  image.output(new java.io.File("target/1975.png"))
 
 end Main
 

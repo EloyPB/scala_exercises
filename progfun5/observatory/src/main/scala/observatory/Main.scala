@@ -11,7 +11,7 @@ object Main extends App:
   if (isWin) System.setProperty("hadoop.home.dir", System.getProperty("user.dir") + "\\winutils\\hadoop-3.3.1")
 
   //  Using spark
-  val df = Extraction.locateTemperaturesSpark(1975, "/stations.csv", "/1975.csv")
+  val df = Extraction.locateTemperaturesSpark(1975, "/stations.csv", "/2015.csv")
   val temperatures = Extraction.averageTempSpark(df)
   println(s"Num records: ${temperatures.size}")
 
@@ -20,7 +20,7 @@ object Main extends App:
     (-60.0, Color(0, 0, 0)))
 
   val image = Visualization.visualize(temperatures, colors)
-  image.output(new java.io.File("target/1975.png"))
+  image.output(new java.io.File("target/2015.png"))
 
 end Main
 

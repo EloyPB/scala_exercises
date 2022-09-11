@@ -12,6 +12,7 @@ import scala.math.{acos, sin, cos, Pi}
   */
 object Visualization extends VisualizationInterface:
   val EarthRadius = 6371  // km
+  val p = 6
 
   def greatCircleDistance(l1: Location, l2: Location): Double =
     if l1 == l2 then 0
@@ -32,7 +33,7 @@ object Visualization extends VisualizationInterface:
     if distances.exists(d => d < 1) then
       temperatures.zip(distances).filter((_, d) => d < 1).head._1._2
     else
-      val weights = distances.map(d => 1 / math.pow(d, 2))
+      val weights = distances.map(d => 1 / math.pow(d, p))
       temperatures.zip(weights).map((p, w) => p._2 * w).sum / weights.sum
 
 

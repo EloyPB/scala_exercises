@@ -10,17 +10,24 @@ object Main extends App:
 
   if (isWin) System.setProperty("hadoop.home.dir", System.getProperty("user.dir") + "\\winutils\\hadoop-3.3.1")
 
-  //  Using spark
-  val df = Extraction.locateTemperaturesSpark(1975, "/stations.csv", "/2015.csv")
-  val temperatures = Extraction.averageTempSpark(df)
-  println(s"Num records: ${temperatures.size}")
-
   val colors = List((60.0, Color(255, 255, 255)), (32.0, Color(255, 0, 0)), (12.0, Color(255, 255, 0)),
     (0.0, Color(0, 255, 255)), (-15.0, Color(0, 0, 255)), (-27.0, Color(255, 0, 255)), (-50.0, Color(33, 0, 107)),
     (-60.0, Color(0, 0, 0)))
 
-  val image = Visualization.visualize(temperatures, colors)
-  image.output(new java.io.File("target/2015.png"))
+  for year <- 1975 to 1976
+  do {
+    val df = Extraction.locateTemperaturesSpark(year, "/stations.csv", s"/$year.csv")
+    val temperatures = Extraction.averageTempSpark(df)
+
+//    // Create tiles
+//    Interaction.generateTiles(Seq((year, temperatures)), Interaction.generateImage)
+
+//     Visualize whole map
+     val image = Visualization.visualize2(temperatures, Interaction.colors)
+     image.output(new java.io.File(s"target/$year.png"))
+  }
+  spark.close
+
 
 end Main
 

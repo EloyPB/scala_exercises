@@ -13,6 +13,8 @@ import scala.collection.parallel.CollectionConverters.given
   */
 object Interaction extends InteractionInterface:
 
+  val toDeg: Double = 180 / math.Pi
+
   /**
     * @param tile Tile coordinates
     * @return The latitude and longitude of the top-left corner of the tile, as per http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
@@ -20,7 +22,7 @@ object Interaction extends InteractionInterface:
   def tileLocation(tile: Tile): Location =
     val n = 1 << tile.zoom
     val lon = tile.x.toDouble / n * 360 - 180
-    val lat = math.atan(math.sinh((1 - tile.y.toDouble / n * 2) * math.Pi)) * 180 / math.Pi
+    val lat = math.atan(math.sinh((1 - tile.y.toDouble / n * 2) * math.Pi)) * toDeg
     Location(lat, lon)
 
   /**
@@ -47,7 +49,10 @@ object Interaction extends InteractionInterface:
 
   def generateImage(year: Year, t: Tile, temperatures: Iterable[(Location, Temperature)]): Unit =
     val image = tile(temperatures, colors, t)
+    val file = java.io.File(s"target/temperatures/$year/${t.zoom}/${t.x}-${t.y}.png")
+    if !file.exists() then java.io.File(file.getParent).mkdirs()
     image.output(new java.io.File(s"target/temperatures/$year/${t.zoom}/${t.x}-${t.y}.png"))
+
 
 
   /**

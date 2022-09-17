@@ -71,3 +71,41 @@ object Visualization extends VisualizationInterface:
     ImmutableImage.wrapPixels(width, height, pixels.toArray, ImageMetadata.empty)
 
 
+  /**Now without re-computing the sines and cosines of all locations.*/
+
+  def greatCircleDistance2(l1: Location, l2: Location, sin_lat1: Double, cos_lat1: Double): Double =
+    if l1 == l2 then 0
+    else if l1.lat == -l2.lat && (l1.lon == l2.lon + 180 || l1.lon == l2.lon - 180) then
+      EarthRadius * Pi
+    else
+      EarthRadius * acos(sin_lat1 * sin(l2.latR) + cos_lat1 * cos(l2.latR) * cos(l2.lonR - l1.lonR))
+
+
+  /**
+    * @param temperatures Known temperatures: pairs containing a location and the temperature at this location
+    * @param location     Location where to predict the temperature
+    * @return The predicted temperature at `location`
+    */
+  def predictTemperature2(temperatures: Iterable[(Location, Temperature)], location: Location,
+                          sin_cos_lat1: Iterable[(Double, Double)]): Temperature =
+    println(s"predicting temperature for $location")
+    val distances = temperatures.zip(sin_cos_lat1).map((loc_temp, sin_cos) => greatCircleDistance2(loc_temp._1, location, sin_cos._1, sin_cos._2))
+    if distances.exists(d => d < 1) then
+      temperatures.zip(distances).filter((_, d) => d < 1).head._1._2
+    else
+      val weights = distances.map(d => 1 / math.pow(d, p))
+      temperatures.zip(weights).map((p, w) => p._2 * w).sum / weights.sum
+
+
+  def visualize2(temperatures: Iterable[(Location, Temperature)], colors: Iterable[(Temperature, Color)]): ImmutableImage =
+    val sin_cos_lat1 = temperatures.map((l, _) => (sin(l.latR), cos(l.latR)))
+
+    val width = 360
+    val height = 180
+    val pixels = (0 until height).par.flatMap(x => (0 until width).map(y => {
+      val color = interpolateColor(colors, predictTemperature2(temperatures, Location(90 - x, y - 180), sin_cos_lat1))
+      Pixel(x, y, color.red, color.green, color.blue, 255)
+    }))
+    ImmutableImage.wrapPixels(width, height, pixels.toArray, ImageMetadata.empty)
+
+

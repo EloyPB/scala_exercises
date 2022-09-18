@@ -12,7 +12,7 @@ import scala.math.{acos, sin, cos, Pi}
   */
 object Visualization extends VisualizationInterface:
   val EarthRadius = 6371  // km
-  val p = 6
+  val P = 6
 
   def greatCircleDistance(l1: Location, l2: Location): Double =
     if l1 == l2 then 0
@@ -33,7 +33,7 @@ object Visualization extends VisualizationInterface:
     if distances.exists(d => d < 1) then
       temperatures.zip(distances).filter((_, d) => d < 1).head._1._2
     else
-      val weights = distances.map(d => 1 / math.pow(d, p))
+      val weights = distances.map(d => 1 / math.pow(d, P))
       temperatures.zip(weights).map((p, w) => p._2 * w).sum / weights.sum
 
 
@@ -72,13 +72,12 @@ object Visualization extends VisualizationInterface:
 
 
   /**Now without re-computing the sines and cosines of all locations.*/
-
-  def greatCircleDistance2(l1: Location, l2: Location, sin_lat1: Double, cos_lat1: Double): Double =
+  def greatCircleDistance2(l1: Location, l1_sin_lat: Double, l1_cos_lat: Double, l2: Location): Double =
     if l1 == l2 then 0
     else if l1.lat == -l2.lat && (l1.lon == l2.lon + 180 || l1.lon == l2.lon - 180) then
       EarthRadius * Pi
     else
-      EarthRadius * acos(sin_lat1 * sin(l2.latR) + cos_lat1 * cos(l2.latR) * cos(l2.lonR - l1.lonR))
+      EarthRadius * acos(l1_sin_lat * sin(l2.latR) + l1_cos_lat * cos(l2.latR) * cos(l2.lonR - l1.lonR))
 
 
   /**
@@ -86,24 +85,25 @@ object Visualization extends VisualizationInterface:
     * @param location     Location where to predict the temperature
     * @return The predicted temperature at `location`
     */
-  def predictTemperature2(temperatures: Iterable[(Location, Temperature)], location: Location,
-                          sin_cos_lat1: Iterable[(Double, Double)]): Temperature =
+  def predictTemperature2(temperatures: Iterable[(Location, Double, Double, Temperature)], location: Location): Temperature =
     println(s"predicting temperature for $location")
-    val distances = temperatures.zip(sin_cos_lat1).map((loc_temp, sin_cos) => greatCircleDistance2(loc_temp._1, location, sin_cos._1, sin_cos._2))
-    if distances.exists(d => d < 1) then
-      temperatures.zip(distances).filter((_, d) => d < 1).head._1._2
+    val distances: Iterable[(Double, Double)] = temperatures.map((loc, l1_sin_lat, l1_cos_lat, temp) =>
+      (greatCircleDistance2(loc, l1_sin_lat, l1_cos_lat, location), temp))
+    val closest = distances.reduce((p1, p2) => if p1._1 < p2._1 then p1 else p2)
+    if closest._1 < 1 then
+      closest._2
     else
-      val weights = distances.map(d => 1 / math.pow(d, p))
-      temperatures.zip(weights).map((p, w) => p._2 * w).sum / weights.sum
+      val weights = distances.map(p => (1 / math.pow(p._1, P), p._2))
+      weights.map((weight, temp) => weight * temp).sum / weights.map((weight, _) => weight).sum
 
 
   def visualize2(temperatures: Iterable[(Location, Temperature)], colors: Iterable[(Temperature, Color)]): ImmutableImage =
-    val sin_cos_lat1 = temperatures.map((l, _) => (sin(l.latR), cos(l.latR)))
+    val data = temperatures.map((loc, temp) => (loc, sin(loc.latR), cos(loc.latR), temp))
 
     val width = 360
     val height = 180
     val pixels = (0 until height).par.flatMap(x => (0 until width).map(y => {
-      val color = interpolateColor(colors, predictTemperature2(temperatures, Location(90 - x, y - 180), sin_cos_lat1))
+      val color = interpolateColor(colors, predictTemperature2(data, Location(90 - x, y - 180)))
       Pixel(x, y, color.red, color.green, color.blue, 255)
     }))
     ImmutableImage.wrapPixels(width, height, pixels.toArray, ImageMetadata.empty)

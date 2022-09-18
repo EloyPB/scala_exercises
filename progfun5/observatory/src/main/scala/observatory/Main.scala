@@ -14,7 +14,7 @@ object Main extends App:
     (0.0, Color(0, 255, 255)), (-15.0, Color(0, 0, 255)), (-27.0, Color(255, 0, 255)), (-50.0, Color(33, 0, 107)),
     (-60.0, Color(0, 0, 0)))
 
-  for year <- 1975 to 1976
+  for year <- 1975 until 1976
   do {
     val df = Extraction.locateTemperaturesSpark(year, "/stations.csv", s"/$year.csv")
     val temperatures = Extraction.averageTempSpark(df)
@@ -22,9 +22,12 @@ object Main extends App:
 //    // Create tiles
 //    Interaction.generateTiles(Seq((year, temperatures)), Interaction.generateImage)
 
-//     Visualize whole map
-     val image = Visualization.visualize2(temperatures, Interaction.colors)
-     image.output(new java.io.File(s"target/$year.png"))
+////     Visualize whole map
+//     val image = Visualization.visualize2(temperatures, Interaction.colors)
+//     image.output(new java.io.File(s"target/$year.png"))
+
+    Manipulation.makeGrid(temperatures)
+
   }
   spark.close
 

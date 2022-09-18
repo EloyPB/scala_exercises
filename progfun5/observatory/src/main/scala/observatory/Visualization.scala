@@ -89,9 +89,8 @@ object Visualization extends VisualizationInterface:
     println(s"predicting temperature for $location")
     val distances: Iterable[(Double, Double)] = temperatures.map((loc, l1_sin_lat, l1_cos_lat, temp) =>
       (greatCircleDistance2(loc, l1_sin_lat, l1_cos_lat, location), temp))
-    val closest = distances.reduce((p1, p2) => if p1._1 < p2._1 then p1 else p2)
-    if closest._1 < 1 then
-      closest._2
+    if distances.exists((d, _) => d < 1) then
+      distances.reduce((p1, p2) => if p1._1 < p2._1 then p1 else p2)._2
     else
       val weights = distances.map(p => (1 / math.pow(p._1, P), p._2))
       weights.map((weight, temp) => weight * temp).sum / weights.map((weight, _) => weight).sum

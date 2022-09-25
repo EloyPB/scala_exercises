@@ -23,10 +23,12 @@ object Main extends App:
 //    Interaction.generateTiles(Seq((year, temperatures)), Interaction.generateImage)
 
 //     Visualize whole map
-     val image = Visualization.visualize2(temperatures, Interaction.colors)
-     image.output(new java.io.File(s"target/$year.png"))
+//     val image = Visualization.visualize2(temperatures, Interaction.colors)
+//     image.output(new java.io.File(s"target/$year.png"))
 
-//    Manipulation.makeGrid(temperatures)
+    val grid = Manipulation.makeGrid(temperatures)
+    val image = Visualization2.visualizeGrid(grid, colors, Tile(0, 0, 0))
+    image.output(new java.io.File(s"target/tile.png"))
 
   }
   spark.close

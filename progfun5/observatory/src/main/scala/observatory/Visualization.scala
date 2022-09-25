@@ -86,7 +86,7 @@ object Visualization extends VisualizationInterface:
     * @return The predicted temperature at `location`
     */
   def predictTemperature2(temperatures: Iterable[(Location, Double, Double, Temperature)], location: Location): Temperature =
-    println(s"predicting temperature for $location")
+//    println(s"predicting temperature for $location")
     val distances: Iterable[(Double, Double)] = temperatures.map((loc, l1_sin_lat, l1_cos_lat, temp) =>
       (greatCircleDistance2(loc, l1_sin_lat, l1_cos_lat, location), temp))
     if distances.exists((d, _) => d < 1) then

@@ -3,6 +3,7 @@ package observatory
 import com.sksamuel.scrimage.ImmutableImage
 import com.sksamuel.scrimage.pixels.Pixel
 import com.sksamuel.scrimage.metadata.ImageMetadata
+import scala.collection.parallel.CollectionConverters.given
 
 /**
   * 5th milestone: value-added information visualization
@@ -25,7 +26,8 @@ object Visualization2 extends Visualization2Interface:
     d10: Temperature,
     d11: Temperature
   ): Temperature =
-    ???
+    d00 * (1 - point.x) * (1 - point.y) + d01 * (1 - point.x) * point.y
+      + d10 * point.x * (1 - point.y) + d11 * point.x * point.y
 
   /**
     * @param grid Grid to visualize
@@ -33,10 +35,26 @@ object Visualization2 extends Visualization2Interface:
     * @param tile Tile coordinates to visualize
     * @return The image of the tile at (x, y, zoom) showing the grid using the given color scale
     */
-  def visualizeGrid(
-    grid: GridLocation => Temperature,
-    colors: Iterable[(Temperature, Color)],
-    tile: Tile
-  ): ImmutableImage =
-    ???
+  def visualizeGrid(grid: GridLocation => Temperature, colors: Iterable[(Temperature, Color)], tile: Tile): ImmutableImage =
+    val subTileX = tile.x * 256
+    val subTileY = tile.y * 256
+    val subTileZoom = tile.zoom + 8
+    val pixels = (0 until 256).par.flatMap(y => (0 until 256).map(x => {
+      val loc = Interaction.tileLocation(Tile(subTileX + x, subTileY + y, subTileZoom))
 
+      val xl = loc.lon.floor.toInt
+      val xr = loc.lon.ceil.toInt
+      val yt = loc.lat.ceil.toInt
+      val yb = loc.lat.floor.toInt
+
+      val t00 = grid(GridLocation(yt, xl))
+      val t01 = grid(GridLocation(yb, xl))
+      val t10 = grid(GridLocation(yt, xr))
+      val t11 = grid(GridLocation(yb, xr))
+
+      val point = CellPoint(loc.lon - xl, yt - loc.lat)
+
+      val color = Visualization.interpolateColor(colors, bilinearInterpolation(point, t00, t01, t10, t11))
+      Pixel(y, x, color.red, color.green, color.blue, 127)
+    }))
+    ImmutableImage.wrapPixels(256, 256, pixels.toArray, ImageMetadata.empty)

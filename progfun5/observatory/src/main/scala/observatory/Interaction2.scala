@@ -9,14 +9,21 @@ object Interaction2 extends Interaction2Interface:
     * @return The available layers of the application
     */
   def availableLayers: Seq[Layer] =
-    ???
+    val tempColors = List((60.0, Color(255, 255, 255)), (32.0, Color(255, 0, 0)), (12.0, Color(255, 255, 0)),
+      (0.0, Color(0, 255, 255)), (-15.0, Color(0, 0, 255)), (-27.0, Color(255, 0, 255)), (-50.0, Color(33, 0, 107)),
+      (-60.0, Color(0, 0, 0)))
+    val devColors = List((7.0, Color(0, 0, 0)), (4.0, Color(255, 0, 0)), (2.0, Color(255, 255, 0)),
+      (0.0, Color(255, 255, 255)), (-2.0, Color(0, 255, 255)), (-7.0, Color(0, 0, 255)))
+
+    Seq(Layer(LayerName.Temperatures, tempColors, Range(1975, 2015)),
+      Layer(LayerName.Deviations, devColors, Range(1991, 2015)))
 
   /**
     * @param selectedLayer A signal carrying the layer selected by the user
     * @return A signal containing the year bounds corresponding to the selected layer
     */
   def yearBounds(selectedLayer: Signal[Layer]): Signal[Range] =
-    ???
+    Signal(selectedLayer().bounds)
 
   /**
     * @param selectedLayer The selected layer
@@ -27,7 +34,11 @@ object Interaction2 extends Interaction2Interface:
     *         in the `selectedLayer` bounds.
     */
   def yearSelection(selectedLayer: Signal[Layer], sliderValue: Signal[Year]): Signal[Year] =
-    ???
+    val bounds = yearBounds(selectedLayer)
+    Signal(if sliderValue() > bounds().end then bounds().end
+      else if sliderValue() < bounds().start then bounds().start
+      else sliderValue())
+
 
   /**
     * @param selectedLayer The selected layer
@@ -35,7 +46,7 @@ object Interaction2 extends Interaction2Interface:
     * @return The URL pattern to retrieve tiles
     */
   def layerUrlPattern(selectedLayer: Signal[Layer], selectedYear: Signal[Year]): Signal[String] =
-    ???
+    Signal(s"target/${selectedLayer().layerName}/${selectedYear()}/{z}/{x}-{y}.png")
 
   /**
     * @param selectedLayer The selected layer
@@ -43,7 +54,7 @@ object Interaction2 extends Interaction2Interface:
     * @return The caption to show
     */
   def caption(selectedLayer: Signal[Layer], selectedYear: Signal[Year]): Signal[String] =
-    ???
+    Signal(s"${selectedLayer().layerName} (${selectedYear()})")
 
 
 // Interface used by the grading infrastructure. Do not change signatures
@@ -58,7 +69,7 @@ trait Interaction2Interface:
 enum LayerName:
   case Temperatures, Deviations
   def id: String =
-    this.match
+    this match
       case Temperatures => "temperatures"
       case Deviations => "deviations"
 
